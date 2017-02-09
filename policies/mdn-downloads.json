@@ -1,0 +1,55 @@
+{
+  "Version": "2012-10-17",
+  "Id": "mdn-downloads policy",
+  "Statement": [
+    {
+      "Sid": "mdn-downloads: Allow ListBucket",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:s3:::mdn-downloads"
+    },
+    {
+      "Sid": "mdn-downloads: Allow sampledb/*",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::mdn-downloads/sampledb/*"
+    },
+    {
+      "Sid": "mdn-downloads: Allow index.html",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::mdn-downloads/index.html"
+    },
+    {
+      "Sid": "mdn-downloads: Allow list.html",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::mdn-downloads/list.html"
+    },
+    {
+      "Sid": "mdn-downloads: Allow tarball",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::mdn-downloads/developer.mozilla.org.tar.gz"
+    },
+    {
+      "Sid": "mdn-downloads: Allow sample DB",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::mdn-downloads/sample_db.sql.gz"
+    },
+    {
+      "Sid": "mdn-downloads: Allow assets/*",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::mdn-downloads/assets/*"
+    }
+  ]
+}
