@@ -42,7 +42,7 @@
       "Effect": "Allow",
       "Principal": "*",
       "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::mdn-downloads/sample_db.sql.gz"
+      "Resource": "arn:aws:s3:::mdn-downloads/mdn_sample_db.sql.gz"
     },
     {
       "Sid": "mdn-downloads: Allow assets/*",
